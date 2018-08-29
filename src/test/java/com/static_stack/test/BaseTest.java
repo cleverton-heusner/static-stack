@@ -12,10 +12,10 @@ public abstract class BaseTest {
 
 	@Rule
 	public ExpectedException exceptedException = ExpectedException.none();
-	protected StaticStack stack;
+	protected StaticStack<Integer> stack;
 
 	@Before
 	public void setup() {
-		stack = new StaticStack().emptyWithMaxSize(STACK_SIZE);
+		stack = new StaticStack<Integer>().emptyWithMaxSize(STACK_SIZE);
 	}
 }
